@@ -84,6 +84,8 @@ public interface AnimalFactory {
 ## Step 5: Implement Concrete Factories
 Create concrete factory classes that implement the factory interface. Each factory produces a specific set of products.
 
+The factories create objects without exposing the instantiation logic to the client, and return the newly created objects as the common interface type. 
+
 ```java
 // Factory for creating black animals
 public class BlackFactory implements AnimalFactory {
@@ -143,6 +145,3 @@ public class AnimalMain {
 - **Step 4**: Define a factory interface (`AnimalFactory`).
 - **Step 5**: Implement concrete factories (`BlackFactory`, `WhiteFactory`).
 - **Step 6**: Use the factories to create objects in the main method.
-
-This approach allows you to create objects dynamically while maintaining a clean and scalable design.
-
