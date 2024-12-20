@@ -1,22 +1,16 @@
 package builder.meal;
 
 public class Waiter {
-    private MealBuilder builder;
+    private ShawermaBuilder builder;
 
-    public Waiter(MealBuilder mealBuilder) {
+    public Waiter(ShawermaBuilder mealBuilder) {
         this.builder = mealBuilder;
     }
 
-    public Meal constructMeal() {
-        builder.buildMainDish();
-        builder.buildSideDish();
-        builder.buildDrink();
-        builder.buildDessert();
-        return builder.getMeal();
-    }
-
-    // Can be used to get the meal without building it
-    public Meal getMeal() {
-        return builder.getMeal();
+    public Shawerma constructShawerma() {
+        builder.buildCore();
+        builder.buildSauce();
+        builder.buildExtra();
+        return builder.getShawerma();
     }
 }
