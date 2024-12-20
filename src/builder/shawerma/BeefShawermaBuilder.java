@@ -1,10 +1,10 @@
-package builder.meal;
+package builder.shawerma;
 
-public class BeefShawermaBuilder {
+public class BeefShawermaBuilder implements ShawermaBuilder {
     private final Shawerma shawerma = new Shawerma();
 
-    public void buildCore() {
-        shawerma.setCore("Beef");
+    public void buildMeat() {
+        shawerma.setMeat("Beef");
     }
 
     public void buildSauce() {

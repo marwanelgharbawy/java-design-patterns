@@ -1,7 +1,7 @@
-package builder.meal;
+package builder.shawerma;
 
 public interface ShawermaBuilder {
-    void buildCore();
+    void buildMeat();
     void buildSauce();
     void buildExtra();
     Shawerma getShawerma();

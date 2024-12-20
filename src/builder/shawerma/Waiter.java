@@ -1,4 +1,4 @@
-package builder.meal;
+package builder.shawerma;
 
 public class Waiter {
     private ShawermaBuilder builder;
@@ -8,7 +8,7 @@ public class Waiter {
     }
 
     public Shawerma constructShawerma() {
-        builder.buildCore();
+        builder.buildMeat();
         builder.buildSauce();
         builder.buildExtra();
         return builder.getShawerma();

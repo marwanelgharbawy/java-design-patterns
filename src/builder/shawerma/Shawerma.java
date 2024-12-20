@@ -1,12 +1,12 @@
-package builder.meal;
+package builder.shawerma;
 
 public class Shawerma {
-    private String core;
+    private String meat;
     private String sauce;
     private String extra;
 
-    public void setCore(String core) {
-        this.core = core;
+    public void setMeat(String meat) {
+        this.meat = meat;
     }
 
     public void setSauce(String sauce) {
@@ -20,7 +20,7 @@ public class Shawerma {
     @Override
     public String toString() {
         return "Shawerma:\n" +
-                "core: " + core +
+                "meat: " + meat +
                 ", sauce: " + sauce +
                 ", extra: " + extra;
     }
