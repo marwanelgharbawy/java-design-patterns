@@ -39,17 +39,17 @@ If an object of the requested color already exists, it will be reused.
 import java.util.HashMap;
 
 public class BirdFactory {
-    private static final HashMap<String, AngryBird> angrybirdMap = new HashMap<>();
+    private static final HashMap<String, AngryBird> angryBirdMap = new HashMap<>();
 
     public static Bird getAngryBird(String color) {
-        AngryBird angrybird = (AngryBird) angrybirdMap.get(color); // Either null or an object
+        AngryBird angryBird = angryBirdMap.get(color); // Either null or an object
 
-        if (angrybird == null) { // If object does not exist, create one
-            angrybird = new AngryBird(color);
-            angrybirdMap.put(color, angrybird);
+        if (angryBird == null) { // If object does not exist, create one
+            angryBird = new AngryBird(color);
+            angryBirdMap.put(color, angryBird);
             System.out.println("Creating Angry Bird of color: " + color);
         }
-        return angrybird; // Return the object if it exists in map
+        return angryBird; // Return the object if it exists in map
     }
 }
 ```
