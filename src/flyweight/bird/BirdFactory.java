@@ -3,16 +3,16 @@ package flyweight.bird;
 import java.util.HashMap;
 
 public class BirdFactory {
-    private static final HashMap<String, AngryBird> angrybirdMap = new HashMap<>();
+    private static final HashMap<String, AngryBird> angryBirdMap = new HashMap<>();
 
     public static Bird getAngryBird(String color) {
-        AngryBird angrybird = (AngryBird) angrybirdMap.get(color);
+        AngryBird angryBird = angryBirdMap.get(color);
 
-        if (angrybird == null) {
-            angrybird = new AngryBird(color);
-            angrybirdMap.put(color, angrybird);
+        if (angryBird == null) {
+            angryBird = new AngryBird(color);
+            angryBirdMap.put(color, angryBird);
             System.out.println("Creating Angry Bird of color: " + color);
         }
-        return angrybird;
+        return angryBird;
     }
 }
