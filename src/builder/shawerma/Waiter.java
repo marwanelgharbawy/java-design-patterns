@@ -3,8 +3,8 @@ package builder.shawerma;
 public class Waiter {
     private ShawermaBuilder builder;
 
-    public Waiter(ShawermaBuilder mealBuilder) {
-        this.builder = mealBuilder;
+    public void setBuilder(ShawermaBuilder builder) {
+        this.builder = builder;
     }
 
     public Shawerma constructShawerma() {
