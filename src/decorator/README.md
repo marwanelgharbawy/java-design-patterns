@@ -125,3 +125,11 @@ Cost of coffee with milk: 6.0
 Cost of coffee with milk and sugar: 6.5
 Cost of coffee with milk, sugar, and whipped cream: 8.0
 ```
+
+## Summary
+
+- **Step 1**: Define the component **interface** `Beverage` that both the concrete component and the decorators will implement.
+- **Step 2**: Create a concrete component that represents the base object (`Coffee`).
+- **Step 3**: Create an **abstract** decorator base class (`CondimentDecorator`) that holds a reference to the component object.
+- **Step 4**: Create concrete decorators (`Milk`, `Sugar`, `WhippedCream`) that extend the base decorator class and add new behavior.
+- **Step 5**: Use the decorators to add new features to the base object in the main program.
