@@ -69,3 +69,10 @@ public class Main {
     }
 }
 ```
+
+## Summary
+
+- **Step 1**: Define the strategy **interface** (`Strategy`) with a method that all concrete strategies will implement.
+- **Step 2**: Implement concrete strategies **classes** (`ConcreteStrategyA`, `ConcreteStrategyB`) that implement the strategy interface.
+- **Step 3**: Create a context **class** (`Context`) that uses the strategy interface and can change the strategy at runtime.
+- **Step 4**: Implement the main program to test the context class with different strategies.
