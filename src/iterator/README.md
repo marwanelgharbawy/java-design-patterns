@@ -52,14 +52,20 @@ public class AnimalList implements AnimalCollection {
     public Iterator createIterator() {
         return new AnimalIterator(animals);
     }
+
+    // Another iterator for reverse traversal
+    public Iterator createReverseIterator() {
+        return new ReverseAnimalIterator(animals);
+    }
 }
 ```
 
 ---
 
-## Step 4: Implement the Concrete Iterator
-Create a concrete class that implements the iterator interface and provides the logic for traversing the collection.
+## Step 4: Implement the Concrete Iterators
+Create concrete classes that implement the iterator interface and provide the logic for traversing the collection in different ways.
 
+### Forward Iterator
 ```java
 // Concrete iterator class
 import java.util.List;
@@ -87,10 +93,39 @@ public class AnimalIterator implements Iterator {
 }
 ```
 
+### Reverse Iterator:
+```java
+// Concrete iterator class for reverse traversal
+import java.util.List;
+
+public class ReverseAnimalIterator implements Iterator {
+    private List<String> animals;
+    private int position;
+
+    public ReverseAnimalIterator(List<String> animals) {
+        this.animals = animals;
+        this.position = animals.size() - 1;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return position >= 0;
+    }
+
+    @Override
+    public Object next() {
+        if (this.hasNext()) {
+            return animals.get(position--);
+        }
+        return null;
+    }
+}
+```
+
 ---
 
-## Step 5: Use the Iterator in the Main Method
-Finally, use the iterator to traverse the collection in a controlled way.
+## Step 5: Use the Iterators in the Main Method
+Finally, use the iterators to traverse the collection in a controlled way.
 
 ```java
 // Main class to demonstrate the iterator pattern
@@ -101,11 +136,20 @@ public class AnimalMain {
         animalList.addAnimal("Dog");
         animalList.addAnimal("Bird");
 
+        // Forward traversal
         Iterator iterator = animalList.createIterator();
 
-        System.out.println("Iterating over animals:");
+        System.out.println("Iterating over animals (forward traversal):");
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
+        }
+        
+        // Reverse traversal
+        Iterator ReverseIterator = animalList.createReverseIterator();
+        
+        System.out.println("Iterating over animals (reverse traversal):");
+        while (reverseIterator.hasNext()) {
+            System.out.println(reverseIterator.next());
         }
     }
 }
@@ -116,8 +160,6 @@ public class AnimalMain {
 ## Summary
 - **Step 1**: Define a collection interface (`AnimalCollection`).
 - **Step 2**: Define the iterator interface (`Iterator`).
-- **Step 3**: Implement a concrete collection (`AnimalList`) that stores items.
-- **Step 4**: Implement a concrete iterator (`AnimalIterator`) to traverse the collection.
-- **Step 5**: Use the iterator in the main method to access elements sequentially.
-
-
+- **Step 3**: Implement a concrete collection (`AnimalList`) that stores items and supports different iterators.
+- **Step 4**: Implement concrete iterators (`AnimalIterator` and `ReverseAnimalIterator`) for forward and reverse traversal.
+- **Step 5**: Use the iterators in the main method to access elements sequentially in different orders.
