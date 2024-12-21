@@ -53,3 +53,9 @@ public class BirdFactory {
     }
 }
 ```
+
+## Summary
+
+- **Step 1**: Define the flyweight **interface** (`Bird`) which will be implemented by all flyweight objects.
+- **Step 2**: Implement the flyweight **class** (`AngryBird`) that represents a concrete flyweight object.
+- **Step 3**: Create the flyweight factory **class** (`BirdFactory`) that ensures only one object per color is created and shared.
