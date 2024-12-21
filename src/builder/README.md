@@ -107,3 +107,12 @@ public class Main {
     }
 }
 ```
+
+---
+
+## Summary
+- **Step 1**: Define the product (`Car`) representing the complex object being built, containing all its parts.
+- **Step 2**: Create the builder interface (`CarBuilder`). Define methods to set each part of the product and a method to return the final product.
+- **Step 3**: Implement the concrete builder (`SportsCarBuilder`) to assemble the product step by step.
+- **Step 4**: Create the director (`CarDirector`) to ensure the product is constructed in a specific sequence using a director class.
+- **Step 5**: Create a builder in the main method, optionally use a director, and build the product.
