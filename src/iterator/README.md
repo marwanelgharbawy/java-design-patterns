@@ -1,4 +1,4 @@
-# Step-by-Step Guide to Implementing the Iterator Design Pattern
+# Iterator Design Pattern
 
 The **Iterator Design Pattern** provides a way to access elements of a collection sequentially without exposing the underlying implementation. Here's how you can implement this pattern step-by-step using a simple example of iterating over a collection of animals.
 
