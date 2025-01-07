@@ -1,6 +1,6 @@
-# Factory Design Pattern
+# Abstract Factory Design Pattern
 
-The **Factory Design Pattern** provides a way to create objects without specifying their exact class.
+The **Abstract Factory Design Pattern** provides a way to create objects without specifying their exact class.
 
 ---
 
