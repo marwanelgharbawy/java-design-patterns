@@ -7,6 +7,8 @@
 
 You should end up with 1 **class** for context, **1 interface** for all strategies, and **some classes** for each strategy.
 
+[Learn more](https://github.com/marwanelgharbawy/java-design-patterns/blob/master/src/strategy/README.md)
+
 ## Decorator Pattern
 
 - **Step 1**: Define the component **interface** `Beverage` that both the concrete component and the decorators will implement.
@@ -16,6 +18,8 @@ You should end up with 1 **class** for context, **1 interface** for all strategi
 
 You should end up with **1 interface**, **1 class** for the base object, **1 abstract class** for the decorator base, and **some classes** implementing it as decorations.
 
+[Learn more](https://github.com/marwanelgharbawy/java-design-patterns/blob/master/src/decorator/README.md)
+
 ## Flyweight Pattern
 
 - **Step 1**: Define the flyweight **interface** (`Bird`) which will be implemented by all flyweight objects.
@@ -23,6 +27,8 @@ You should end up with **1 interface**, **1 class** for the base object, **1 abs
 - **Step 3**: Create the flyweight factory **class** (`BirdFactory`) that ensures only one object per color is created and shared.
 
 You should end up with **1 interface**, **1 class** representing the flyweight object, **1 class** for the flyweight factory.
+
+[Learn more](https://github.com/marwanelgharbawy/java-design-patterns/blob/master/src/flyweight/README.md)
 
 ## Builder Pattern
 
@@ -33,6 +39,8 @@ You should end up with **1 interface**, **1 class** representing the flyweight o
 
 You should end up with **1 class** for the complex object, **1 interface**, **some classes** of builders implementing the interface, and **1 class** as a director.
 
+[Learn more](https://github.com/marwanelgharbawy/java-design-patterns/blob/master/src/builder/README.md)
+
 ## Abstract Factory Pattern
 
 - **Step 1**: Define a common **interface** (`Animal`).
@@ -41,7 +49,9 @@ You should end up with **1 class** for the complex object, **1 interface**, **so
 - **Step 4**: Define a factory **interface** (`AnimalFactory`) that declares methods to create different types of objects.
 - **Step 5**: Implement concrete factories **classes** (`BlackFactory`, `WhiteFactory`) that instantiate specific products.
 
-You should end up with **2 interfaces**, **at least 2 abstract classes** for categories, **at least 4 classes** for products extending the the category abstract classes and implementing the common interface, **at least 2 classes** for factories implementing the factory interface
+You should end up with **2 interfaces**, **at least 2 abstract classes** for categories, **at least 4 classes** for products extending the the category abstract classes and implementing the common interface, **at least 2 classes** for factories implementing the factory interface.
+
+[Learn more](https://github.com/marwanelgharbawy/java-design-patterns/blob/master/src/abstractfactory/REAMDE.md)
 
 ## Iterator Pattern
 
@@ -51,3 +61,5 @@ You should end up with **2 interfaces**, **at least 2 abstract classes** for cat
 - **Step 4**: Implement concrete iterators **classes** (`AnimalIterator` and `ReverseAnimalIterator`) for different traversal methods.
 
 You should end up with **2 interfaces**, **1 class** for collection, and **at least 1 class** for iterators.
+
+[Learn more](https://github.com/marwanelgharbawy/java-design-patterns/blob/master/src/iterator/README.md)
